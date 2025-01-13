@@ -54,6 +54,10 @@ python3 compute_cross_section.py -c UL18 -f /CMSDAS/compliant/sample/path
 
 This python script above will print a cmsRun script, which you can just copy and paste it on the terminal and run it.
 
+An example could be:
+```
+python3 compute_cross_section.py -c UL18 -f /DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM
+```
 
 
 
