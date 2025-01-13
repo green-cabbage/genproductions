@@ -59,5 +59,36 @@ An example could be:
 python3 compute_cross_section.py -c UL18 -f /DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM
 ```
 
+Which will prompt you to run 
+```
+cmsRun genXsec_cfg.py inputFiles="/A very long list of root files"
+```
 
+Which after running that command on the same terminal, it will print something like
+```
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Overall cross-section summary 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process		xsec_before [pb]		passed	nposw	nnegw	tried	nposw	nnegw 	xsec_match [pb]			accepted [%]	 event_eff [%]
+0		6.221e+03 +/- 1.207e+01		656590	592757	63833	747429	682744	64685	5.324e+03 +/- 1.071e+01		85.6 +/- 0.0	87.8 +/- 0.0
+1		3.590e+03 +/- 1.172e+01		219704	159650	60054	1029493	695933	333560	9.866e+02 +/- 5.265e+00		27.5 +/- 0.1	21.3 +/- 0.0
+2		1.671e+03 +/- 1.084e+01		123710	80376	43334	853958	512945	341013	3.599e+02 +/- 3.980e+00		21.5 +/- 0.2	14.5 +/- 0.0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Total		1.148e+04 +/- 2.001e+01		1000004	832783	167221	2630880	1891622	739258	6.631e+03 +/- 1.433e+01		57.8 +/- 0.1	38.0 +/- 0.0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before matching: total cross section = 1.148e+04 +- 2.001e+01 pb
+After matching: total cross section = 6.631e+03 +- 1.433e+01 pb
+Matching efficiency = 0.4 +/- 0.0   [TO BE USED IN MCM]
+Filter efficiency (taking into account weights)= (1.76623e+10) / (1.76623e+10) = 1.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (1e+06) / (1e+06) = 1.000e+00 +- 0.000e+00    [TO BE USED IN MCM]
 
+After filter: final cross section = 6.631e+03 +- 1.433e+01 pb
+After filter: final fraction of events with negative weights = 1.672e-01 +- 2.570e-05
+After filter: final equivalent lumi for 1M events (1/fb) = 6.680e-02 +- 1.061e-04
+
+```
+
+and here the Cross section value is represented as "After filter: final cross section", which in our case is 6.631e+03 +- 1.433e+01 pb
